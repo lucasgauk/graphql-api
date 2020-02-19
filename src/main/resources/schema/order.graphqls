@@ -1,0 +1,25 @@
+type Order {
+  id: String!
+  total: BigDecimal,
+  status: OrderStatus @deprecated(reason: "Poor implementation")
+  payments: [Payment]!
+  createdAt: String!
+}
+
+enum OrderStatus {
+  COMPLETED,
+  IN_PROGRESS
+}
+
+extend type Query {
+  orders(count: Int!, offset: Int!): [Order]!
+  ordersByStatus(status: String!): [Order]!
+  ordersBetween(start: Date, end: Date): [Order]!
+}
+
+extend type Mutation {
+  createOrder(total: BigDecimal): Order!
+}
+
+
+
