@@ -28,7 +28,6 @@ public class OrderResolver implements GraphQLResolver<Order> {
     } catch (IllegalArgumentException e) {
       return order.getCreatedAt().toString();
     }
-
   }
 
 }
