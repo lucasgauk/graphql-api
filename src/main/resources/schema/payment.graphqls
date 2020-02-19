@@ -1,10 +1,8 @@
 type Payment {
-
   id: String!
   orderId: String!
   amount: BigDecimal
   createdAt: String!
-
 }
 
 extend type Mutation {

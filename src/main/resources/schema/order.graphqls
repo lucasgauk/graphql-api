@@ -3,7 +3,7 @@ type Order {
   total: BigDecimal,
   status: OrderStatus @deprecated(reason: "Poor implementation")
   payments: [Payment]!
-  createdAt: String!
+  createdAt(format: String = "yyyy-MM-dd HH:mm:ss"): String!
 }
 
 enum OrderStatus {
