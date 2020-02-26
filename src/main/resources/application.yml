@@ -4,4 +4,4 @@ spring:
 
   data:
     mongodb:
-      uri: "mongodb://${MTNOS_MONGO_USERNAME}:${MTNOS_MONGO_PASSWORD}@${MTNOS_MONGO_HOST:localhost}:${MTNOS_MONGO_PORT:27017}/${MTNOS_MONGO_DB_NAME:graphql}?authMechanism=SCRAM-SHA-256&authSource=admin"
+      uri: "mongodb://${MONGO_USERNAME}:${MONGO_PASSWORD}@${MONGO_HOST:localhost}:${MONGO_PORT:27017}/${MONGO_DB_NAME:graphql}?authMechanism=SCRAM-SHA-256&authSource=admin"
